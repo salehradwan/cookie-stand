@@ -38,7 +38,7 @@ let Seattle = {
       ulElement.appendChild(liElement);
     }
     const liElement = document.createElement('li');
-    liElement.textContent = 'Total: ' + total +' cookies ';
+    liElement.textContent = 'Total: ' + total + ' cookies ';
     ulElement.appendChild(liElement);
   },
 
@@ -81,7 +81,7 @@ let Tokyo = {
       ulElement.appendChild(liElement);
     }
     const liElement = document.createElement('li');
-    liElement.textContent = 'Total: ' + total +' cookies ';
+    liElement.textContent = 'Total: ' + total + ' cookies ';
     ulElement.appendChild(liElement);
   },
 
@@ -125,7 +125,7 @@ let Dubai = {
       ulElement.appendChild(liElement);
     }
     const liElement = document.createElement('li');
-    liElement.textContent = 'Total: ' + total +' cookies ';
+    liElement.textContent = 'Total: ' + total + ' cookies ';
     ulElement.appendChild(liElement);
   },
 
@@ -169,7 +169,7 @@ let Paris = {
       ulElement.appendChild(liElement);
     }
     const liElement = document.createElement('li');
-    liElement.textContent = 'Total: ' + total +' cookies ';
+    liElement.textContent = 'Total: ' + total + ' cookies ';
     ulElement.appendChild(liElement);
   },
 
@@ -213,35 +213,31 @@ let Lima = {
       ulElement.appendChild(liElement);
     }
     const liElement = document.createElement('li');
-    liElement.textContent = 'Total: ' + total +' cookies ';
+    liElement.textContent = 'Total: ' + total + ' cookies ';
     ulElement.appendChild(liElement);
   },
 
 };
-console.log(Seattle.customersPerHour(23, 65));
+let seattleArray = [];
+let tokyoArray = [];
+let dubaiArray = [];
+let parisArray = [];
+let limaArray = [];
+
+seattleArray.push(Seattle);
+tokyoArray.push(Tokyo);
+dubaiArray.push(Dubai);
+parisArray.push(Paris);
+limaArray.push(Lima);
+console.log(seattleArray);
+console.log(tokyoArray);
+console.log(dubaiArray);
+console.log(parisArray);
+console.log(limaArray);
+// console.log(Seattle.customersPerHour(23, 65));
 Seattle.renderSeattle();
 Tokyo.renderTokyo();
 Dubai.renderDubai();
 Paris.renderParis();
 Lima.renderLima();
-console.log(Tokyo.customerPerHourArr);
-console.log(Tokyo.hourWork);
-console.log(Seattle);
-let ss = [];
-ss.push(Seattle);
-console.log(ss);
 
-// console.log(Seattle.purchasedEachHour());
-
-// function formatAMPM(date) {
-//   let hours = date.getHours();
-//   // let minutes = date.getMinutes();
-//   let ampm = hours >= 12 ? 'pm' : 'am';
-//   hours = hours % 12;
-//   hours = hours ? hours : 12; // the hour '0' should be '12'
-//   // minutes = minutes < 10 ? '0'+minutes : minutes;
-//   let strTime = hours + ':' + ampm;
-//   return strTime;
-// }
-
-// console.log(formatAMPM(new Date));

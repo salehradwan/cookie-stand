@@ -7,6 +7,7 @@ let Seattle = {
   avgCookies: 6.3,
   hourWork: ['6am:', '7am:', '8am:', '9am:', '10am:', '11am:', '12pm:', '1pm:', '2pm:', '3pm:', '4pm:', '5pm:', '6pm:', '7pm:'],
 
+  customerPerHourArr: [],
   customersPerHour: function (min, max) {
     // return getRandomIntInclusive(min, max);
     min = Math.ceil(min);
@@ -16,7 +17,10 @@ let Seattle = {
   purchasedEachHour: function () {
     return Math.floor(this.customersPerHour(this.minCustomer, this.maxCustomer) * this.avgCookies);
   },
-  render: function () {
+  pushCustomerPerHourArr: function () {
+    this.customerPerHourArr.push(this.purchasedEachHour());
+  },
+  renderSeattle: function () {
     const parentElement = document.getElementById('salmon-cookies');
 
     const pElement = document.createElement('p');
@@ -25,12 +29,17 @@ let Seattle = {
 
     let ulElement = document.createElement('ul');
     parentElement.appendChild(ulElement);
-
+    let total = 0;
     for (let i = 0; i < this.hourWork.length; i++) {
+      this.pushCustomerPerHourArr();
+      total = total + this.customerPerHourArr[i];
       const liElement = document.createElement('li');
-      liElement.textContent = this.hourWork[i] + ' ' + this.purchasedEachHour();
+      liElement.textContent = this.hourWork[i] + ' ' + this.customerPerHourArr[i] + ' cookies ';
       ulElement.appendChild(liElement);
     }
+    const liElement = document.createElement('li');
+    liElement.textContent = 'Total: ' + total +' cookies ';
+    ulElement.appendChild(liElement);
   },
 
 };
@@ -41,7 +50,7 @@ let Tokyo = {
   maxCustomer: 24,
   avgCookies: 1.2,
   hourWork: ['6am:', '7am:', '8am:', '9am:', '10am:', '11am:', '12pm:', '1pm:', '2pm:', '3pm:', '4pm:', '5pm:', '6pm:', '7pm:'],
-
+  customerPerHourArr: [],
   customersPerHour: function (min, max) {
     // return getRandomIntInclusive(min, max);
     min = Math.ceil(min);
@@ -50,6 +59,9 @@ let Tokyo = {
   },
   purchasedEachHour: function () {
     return Math.floor(this.customersPerHour(this.minCustomer, this.maxCustomer) * this.avgCookies);
+  },
+  pushCustomerPerHourArr: function () {
+    this.customerPerHourArr.push(this.purchasedEachHour());
   },
   renderTokyo: function () {
     const parentElement = document.getElementById('salmon-cookies');
@@ -60,12 +72,17 @@ let Tokyo = {
 
     let ulElement = document.createElement('ul');
     parentElement.appendChild(ulElement);
-
+    let total = 0;
     for (let i = 0; i < this.hourWork.length; i++) {
+      this.pushCustomerPerHourArr();
+      total = total + this.customerPerHourArr[i];
       const liElement = document.createElement('li');
-      liElement.textContent = this.hourWork[i] + ' ' + this.purchasedEachHour();
+      liElement.textContent = this.hourWork[i] + ' ' + this.customerPerHourArr[i] + ' cookies ';
       ulElement.appendChild(liElement);
     }
+    const liElement = document.createElement('li');
+    liElement.textContent = 'Total: ' + total +' cookies ';
+    ulElement.appendChild(liElement);
   },
 
 };
@@ -77,6 +94,7 @@ let Dubai = {
   avgCookies: 3.7,
   hourWork: ['6am:', '7am:', '8am:', '9am:', '10am:', '11am:', '12pm:', '1pm:', '2pm:', '3pm:', '4pm:', '5pm:', '6pm:', '7pm:'],
 
+  customerPerHourArr: [],
   customersPerHour: function (min, max) {
     // return getRandomIntInclusive(min, max);
     min = Math.ceil(min);
@@ -85,6 +103,9 @@ let Dubai = {
   },
   purchasedEachHour: function () {
     return Math.floor(this.customersPerHour(this.minCustomer, this.maxCustomer) * this.avgCookies);
+  },
+  pushCustomerPerHourArr: function () {
+    this.customerPerHourArr.push(this.purchasedEachHour());
   },
   renderDubai: function () {
     const parentElement = document.getElementById('salmon-cookies');
@@ -95,12 +116,17 @@ let Dubai = {
 
     let ulElement = document.createElement('ul');
     parentElement.appendChild(ulElement);
-
+    let total = 0;
     for (let i = 0; i < this.hourWork.length; i++) {
+      this.pushCustomerPerHourArr();
+      total = total + this.customerPerHourArr[i];
       const liElement = document.createElement('li');
-      liElement.textContent = this.hourWork[i] + ' ' + this.purchasedEachHour();
+      liElement.textContent = this.hourWork[i] + ' ' + this.customerPerHourArr[i] + ' cookies ';
       ulElement.appendChild(liElement);
     }
+    const liElement = document.createElement('li');
+    liElement.textContent = 'Total: ' + total +' cookies ';
+    ulElement.appendChild(liElement);
   },
 
 };
@@ -112,6 +138,7 @@ let Paris = {
   avgCookies: 2.3,
   hourWork: ['6am:', '7am:', '8am:', '9am:', '10am:', '11am:', '12pm:', '1pm:', '2pm:', '3pm:', '4pm:', '5pm:', '6pm:', '7pm:'],
 
+  customerPerHourArr: [],
   customersPerHour: function (min, max) {
     // return getRandomIntInclusive(min, max);
     min = Math.ceil(min);
@@ -120,6 +147,9 @@ let Paris = {
   },
   purchasedEachHour: function () {
     return Math.floor(this.customersPerHour(this.minCustomer, this.maxCustomer) * this.avgCookies);
+  },
+  pushCustomerPerHourArr: function () {
+    this.customerPerHourArr.push(this.purchasedEachHour());
   },
   renderParis: function () {
     const parentElement = document.getElementById('salmon-cookies');
@@ -130,12 +160,17 @@ let Paris = {
 
     let ulElement = document.createElement('ul');
     parentElement.appendChild(ulElement);
-
+    let total = 0;
     for (let i = 0; i < this.hourWork.length; i++) {
+      this.pushCustomerPerHourArr();
+      total = total + this.customerPerHourArr[i];
       const liElement = document.createElement('li');
-      liElement.textContent = this.hourWork[i] + ' ' + this.purchasedEachHour();
+      liElement.textContent = this.hourWork[i] + ' ' + this.customerPerHourArr[i] + ' cookies ';
       ulElement.appendChild(liElement);
     }
+    const liElement = document.createElement('li');
+    liElement.textContent = 'Total: ' + total +' cookies ';
+    ulElement.appendChild(liElement);
   },
 
 };
@@ -147,6 +182,7 @@ let Lima = {
   avgCookies: 4.6,
   hourWork: ['6am:', '7am:', '8am:', '9am:', '10am:', '11am:', '12pm:', '1pm:', '2pm:', '3pm:', '4pm:', '5pm:', '6pm:', '7pm:'],
 
+  customerPerHourArr: [],
   customersPerHour: function (min, max) {
     // return getRandomIntInclusive(min, max);
     min = Math.ceil(min);
@@ -155,6 +191,9 @@ let Lima = {
   },
   purchasedEachHour: function () {
     return Math.floor(this.customersPerHour(this.minCustomer, this.maxCustomer) * this.avgCookies);
+  },
+  pushCustomerPerHourArr: function () {
+    this.customerPerHourArr.push(this.purchasedEachHour());
   },
   renderLima: function () {
     const parentElement = document.getElementById('salmon-cookies');
@@ -165,21 +204,44 @@ let Lima = {
 
     let ulElement = document.createElement('ul');
     parentElement.appendChild(ulElement);
-
+    let total = 0;
     for (let i = 0; i < this.hourWork.length; i++) {
+      this.pushCustomerPerHourArr();
+      total = total + this.customerPerHourArr[i];
       const liElement = document.createElement('li');
-      liElement.textContent = this.hourWork[i] + ' ' + this.purchasedEachHour();
+      liElement.textContent = this.hourWork[i] + ' ' + this.customerPerHourArr[i] + ' cookies ';
       ulElement.appendChild(liElement);
     }
+    const liElement = document.createElement('li');
+    liElement.textContent = 'Total: ' + total +' cookies ';
+    ulElement.appendChild(liElement);
   },
 
 };
 console.log(Seattle.customersPerHour(23, 65));
-Seattle.render();
+Seattle.renderSeattle();
 Tokyo.renderTokyo();
 Dubai.renderDubai();
 Paris.renderParis();
 Lima.renderLima();
+console.log(Tokyo.customerPerHourArr);
+console.log(Tokyo.hourWork);
 console.log(Seattle);
+let ss = [];
+ss.push(Seattle);
+console.log(ss);
 
 // console.log(Seattle.purchasedEachHour());
+
+// function formatAMPM(date) {
+//   let hours = date.getHours();
+//   // let minutes = date.getMinutes();
+//   let ampm = hours >= 12 ? 'pm' : 'am';
+//   hours = hours % 12;
+//   hours = hours ? hours : 12; // the hour '0' should be '12'
+//   // minutes = minutes < 10 ? '0'+minutes : minutes;
+//   let strTime = hours + ':' + ampm;
+//   return strTime;
+// }
+
+// console.log(formatAMPM(new Date));

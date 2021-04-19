@@ -1,6 +1,6 @@
 'use strict';
 let hourWork = ['6am:', '7am:', '8am:', '9am:', '10am:', '11am:', '12pm:', '1pm:', '2pm:', '3pm:', '4pm:', '5pm:', '6pm:', '7pm:'];
-// let country = ['seattel', 'tokyo', 'dubai', 'paris', 'lima'];
+let country = ['seattel', 'tokyo', 'dubai', 'paris', 'lima'];
 
 function Cookies(name, minCustomer, maxCustomer, avgCookies) {
   this.name = name;
@@ -49,6 +49,9 @@ Cookies.prototype.renderSeattle = function () {
   const tdDailyLocTotal = document.createElement('td');
   trSeattle.appendChild(tdDailyLocTotal);
   tdDailyLocTotal.textContent = Total;
+
+  // call the Total function to create a total
+  //generateTableTotal(tableElement);
 
 };
 Cookies.prototype.renderTokyo = function () {
@@ -158,36 +161,38 @@ Cookies.prototype.renderLima = function () {
   //generateTableTotal(tableElement);
 
 };
-
 let seattle = new Cookies('Seattle', 23, 65, 6.3);
+
 seattle.cookiesPerHour();
 seattle.pushCustomerPerHourArr();
 seattle.renderSeattle();
-
 let tokyo = new Cookies('Tokyo', 3, 24, 1.2);
+
 tokyo.cookiesPerHour();
 tokyo.pushCustomerPerHourArr();
 tokyo.renderTokyo();
 
-let dubai = new Cookies('Dubai', 11, 38, 3.7);
+let dubai = new Cookies('Dubai', 3, 24, 1.2);
+
 dubai.cookiesPerHour();
 dubai.pushCustomerPerHourArr();
 dubai.renderDubai();
 
-let paris = new Cookies('Paris', 20, 38, 2.3);
+let paris = new Cookies('Paris', 3, 24, 1.2);
+
 paris.cookiesPerHour();
 paris.pushCustomerPerHourArr();
 paris.renderParis();
 
-let lima = new Cookies('Lima', 2, 16, 4.6);
+let lima = new Cookies('Lima', 3, 24, 1.2);
 lima.cookiesPerHour();
 lima.pushCustomerPerHourArr();
 lima.renderLima();
 
 // function to generate the header
-function generateTableHeader() {
+function generateTableHeader(parentElement) {
   const trHeader = document.createElement('tr');
-  tableElement.appendChild(trHeader);
+  parentElement.appendChild(trHeader);
 
   const thHeader = document.createElement('th');
   trHeader.appendChild(thHeader);
@@ -203,21 +208,21 @@ function generateTableHeader() {
 }
 
 // function to generate the total
-// function generateTableTotal() {
+// function generateTableTotal(parentElement) {
 //   const trTotla = document.createElement('tr');
-//   tableElement.appendChild(trTotla);
+//   parentElement.appendChild(trTotla);
 
 //   const tdTotal = document.createElement('td');
 //   trTotla.appendChild(tdTotal);
 //   tdTotal.textContent = 'Total';
 //   let total = 0;
 //   for (let i = 0; i < hourWork.length; i++) {
-//     for (let j = 0; j < country.length; j++) {
-//       total += seattle.cookiesPerHourArr[i];
-//       const tdTotal = document.createElement('td');
-//       trTotla.appendChild(tdTotal);
-//       tdTotal.textContent = total;
-//     }
-
+//     // seattle.pushCustomerPerHourArr();
+//     total += seattle.cookiesPerHourArr[i];
+//     const tdTotal = document.createElement('td');
+//     trTotla.appendChild(tdTotal);
+//     tdTotal.textContent = total;
 //   }
 // }
+
+

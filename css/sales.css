@@ -4,9 +4,10 @@ body {
     font-family: 'Archivo', Helvetica;
 }
 
-p {
+header p {
     margin-left: 20px;
     color: #810000;
+    font-size: 60px;
 }
 ul {
     list-style: none;
@@ -21,9 +22,21 @@ ul li::before {
     margin-right: 1em;
 }
 
+header a {
+    text-decoration: none;
+    border-style: groove;
+    margin: 10px;
+    background-color: #bdd2b6;
+    color: #96a189;
+}
+header a:hover {
+    background-color: #536162;
+}
+
 table {
     border-collapse: collapse;
     text-align: center;
+    margin: 20px;
   }
   
   td, th {
@@ -33,7 +46,6 @@ table {
   }
   
   th {
-    
     border: none;
     color: #000;
   }

@@ -1,115 +1,9 @@
-'use strict';
-let hourWork = ['6am:', '7am:', '8am:', '9am:', '10am:', '11am:', '12pm:', '1pm:', '2pm:', '3pm:', '4pm:', '5pm:', '6pm:', '7pm:'];
-// let country = ['seattel', 'tokyo', 'dubai', 'paris', 'lima'];
+let images = ['./image/cutter.jpeg', './image/family.jpg', './image/fish.jpg', './image/frosted-cookie.jpg', './image/shirt.jpg'];
 
-function Cookies(name, minCustomer, maxCustomer, avgCookies) {
-  this.name = name;
-  this.minCustomer = minCustomer;
-  this.maxCustomer = maxCustomer;
-  this.avgCookies = avgCookies;
-  this.cookiesPerHourArr = [];
-  // this.cookiesPerHourArr = [];
-}
-Cookies.prototype.customersPerHour = function (min, max) {
-  // return getRandomIntInclusive(min, max);
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min + 1) + min); //The maximum is inclusive and the minimum is inclusive
-};
-Cookies.prototype.cookiesPerHour = function () {
-  return Math.ceil(this.customersPerHour(this.minCustomer, this.maxCustomer) * this.avgCookies);
-};
-Cookies.prototype.pushCustomerPerHourArr = function () {
-  this.cookiesPerHourArr.push(this.cookiesPerHour());
-};
-const parentElement = document.getElementById('salmon-cookies');
-//create a table
-let tableElement = document.createElement('table');
-parentElement.appendChild(tableElement);
-Cookies.prototype.renderSeattle = function () {
-  // call the header function to create a header
-  generateTableHeader(tableElement);
-  // create a row
-  const trSeattle = document.createElement('tr');
-  tableElement.appendChild(trSeattle);
+let index = 0;
+const imgElement = document.querySelector('#mainPhoto');
 
-  //create a data
-  const tdSeattle = document.createElement('td');
-  trSeattle.appendChild(tdSeattle);
-  tdSeattle.textContent = this.name;
-  let Total = 0;
-  for (let i = 0; i < hourWork.length; i++) {
-    this.pushCustomerPerHourArr();
-    Total += this.cookiesPerHourArr[i];
-    const tdSeattle = document.createElement('td');
-    trSeattle.appendChild(tdSeattle);
-    tdSeattle.textContent = this.cookiesPerHourArr[i];
-  }
-
-  const tdDailyLocTotal = document.createElement('td');
-  trSeattle.appendChild(tdDailyLocTotal);
-  tdDailyLocTotal.textContent = Total;
-
-};
-Cookies.prototype.renderTokyo = function () {
-  // create a row
-  const trTokyo = document.createElement('tr');
-  tableElement.appendChild(trTokyo);
-
-  //create a data
-  const tdTokyo = document.createElement('td');
-  trTokyo.appendChild(tdTokyo);
-  tdTokyo.textContent = this.name;
-  let Total = 0;
-  for (let i = 0; i < hourWork.length; i++) {
-    this.pushCustomerPerHourArr();
-    Total += this.cookiesPerHourArr[i];
-    const tdTokyo = document.createElement('td');
-    trTokyo.appendChild(tdTokyo);
-    tdTokyo.textContent = this.cookiesPerHourArr[i];
-  }
-
-  const tdDailyLocTotal = document.createElement('td');
-  trTokyo.appendChild(tdDailyLocTotal);
-  tdDailyLocTotal.textContent = Total;
-
-  // call the Total function to create a total
-  //generateTableTotal(tableElement);
-
-};
-
-Cookies.prototype.renderDubai = function () {
-  // create a row
-  const trDubai = document.createElement('tr');
-  tableElement.appendChild(trDubai);
-
-  //create a data
-  const tdDubai = document.createElement('td');
-  trDubai.appendChild(tdDubai);
-  tdDubai.textContent = this.name;
-  let Total = 0;
-  for (let i = 0; i < hourWork.length; i++) {
-    this.pushCustomerPerHourArr();
-    Total += this.cookiesPerHourArr[i];
-    const tdDubai = document.createElement('td');
-    trDubai.appendChild(tdDubai);
-    tdDubai.textContent = this.cookiesPerHourArr[i];
-  }
-
-  const tdDailyLocTotal = document.createElement('td');
-  trDubai.appendChild(tdDailyLocTotal);
-  tdDailyLocTotal.textContent = Total;
-
-  // call the Total function to create a total
-  //generateTableTotal(tableElement);
-
-};
-
-Cookies.prototype.renderParis = function () {
-  // create a row
-  const trParis = document.createElement('tr');
-  tableElement.appendChild(trParis);
-
+<<<<<<< HEAD
   //create a data
   const tdParis = document.createElement('td');
   trParis.appendChild(tdParis);
@@ -222,3 +116,13 @@ function generateTableHeader() {
 
 //   }
 // }
+=======
+function change() {
+  imgElement.src = images[index];
+  index > 1 ? index = 0 : index++;
+}
+
+window.onload = function () {
+  setInterval(change, 2000);
+};
+>>>>>>> b9a4536b90670ef16b011f27998359e873a0d602

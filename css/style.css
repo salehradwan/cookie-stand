@@ -7,6 +7,8 @@ body {
 header p { 
     font-weight: 700px;
     color: #96a189;
+    text-align: center;
+    font-size: 30px;
 }
 
 header a {

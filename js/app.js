@@ -191,7 +191,7 @@ function generateTableHeader() {
 
   const thHeader = document.createElement('th');
   trHeader.appendChild(thHeader);
-  thHeader.textContent = '##';
+  thHeader.textContent = '';
   for (let i = 0; i < hourWork.length; i++) {
     let thHeader = document.createElement('th');
     trHeader.appendChild(thHeader);
@@ -201,7 +201,8 @@ function generateTableHeader() {
   trHeader.appendChild(thTotal);
   thTotal.textContent = 'Daily location Total';
 }
-
+/*
+*/
 // function to generate the total
 // function generateTableTotal() {
 //   const trTotla = document.createElement('tr');

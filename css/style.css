@@ -20,3 +20,14 @@ header a {
 header a:hover {
     background-color: #536162;
 }
+main p {
+    font-weight: 700px;
+    color: #a1898d;
+    margin: 30px;
+    font-size: 40px;
+}
+
+main ul li { 
+    list-style-type: circle;
+    font-size: 20px;
+}

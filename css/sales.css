@@ -9,6 +9,47 @@ header p {
     color: #810000;
     font-size: 60px;
 }
+fieldset {
+    width: 50%;
+    margin-left: 25%;
+}
+legend {
+    font-weight: 400;
+    color: rgb(243, 67, 67);
+    font-size: 30px;
+}
+form {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+}
+form label {
+    display: block;
+    padding: 5px 0;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 300;
+    color: maroon;
+}
+form input {
+    display: block;
+    width: 60%;
+}
+.submit {
+    /* display: inline-block; */
+    width: auto;
+    /* margin: 10px 0 0 80px; */
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #810000;
+    color: cornsilk;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 300ms;
+}
+.submit:hover {
+    background: darkslategray;
+}
 ul {
     list-style: none;
 }
@@ -36,7 +77,7 @@ header a:hover {
 table {
     border-collapse: collapse;
     text-align: center;
-    margin: 20px;
+    margin: 20px auto;
   }
   
   td, th {

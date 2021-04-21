@@ -1,5 +1,5 @@
 'use strict';
-
+const cookies = document.getElementById('cookies');
 let hourWork = ['6am:', '7am:', '8am:', '9am:', '10am:', '11am:', '12pm:', '1pm:', '2pm:', '3pm:', '4pm:', '5pm:', '6pm:', '7pm:'];
 function Cookies(name, minCustomer, maxCustomer, avgCookies) {
   this.name = name;
@@ -69,7 +69,7 @@ function tableHead() {
   trHeader.appendChild(thTotal);
   thTotal.textContent = 'Total daily location';
 }
-function render() {
+function renderCity() {
   for (let i = 0; i < Cookies.allCity.length; i++) {
     Cookies.allCity[i].render();
   }
@@ -98,12 +98,26 @@ function tableTotal() {
   trTotal.appendChild(thAllTotal);
   thAllTotal.textContent = totalOfTotal;
 }
+cookies.addEventListener('submit', eventButton);
+function eventButton(event) {
+  event.preventDefault();
+  const name = event.target.cityName.value;
+  const minCustomer = event.target.minCustomer.value;
+  const maxCustomer = event.target.maxCustomer.value;
+  const avgCookies = event.target.avgCookies.value;
 
+  new Cookies(name, minCustomer, maxCustomer, avgCookies);
+  tableHead();
+
+  renderCity();
+
+  tableTotal();
+  cookies.reset();
+}
 new Cookies('Seattle', 23, 65, 6.3);
 new Cookies('Tokyo', 3, 24, 1.2);
 new Cookies('Dubai', 11, 38, 3.7);
 new Cookies('Paris', 20, 38, 2.3);
 new Cookies('Lima', 2, 16, 4.6);
-tableHead();
-render();
-tableTotal();
+
+console.log(Cookies.allCity);

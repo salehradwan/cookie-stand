@@ -1,27 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,600;0,900;1,200&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
 body {
-    font-family: 'Archivo', Helvetica;
+    font-family: 'Bangers', cursive;
+    color: #132c33;
+    background-color: #d8e3e7;
 }
 
 header p {
     margin-left: 20px;
-    color: #810000;
+    /* color: #810000; */
     font-size: 60px;
 }
 fieldset {
     width: 50%;
     margin-left: 25%;
+    background-color: #a2b29f;
 }
 legend {
     font-weight: 400;
-    color: rgb(243, 67, 67);
+    /* color: rgb(243, 67, 67); */
     font-size: 30px;
 }
 form {
     max-width: 500px;
     margin: 20px auto;
     padding: 20px;
+    color: #126e82;
+    font-family: Georgia;
 }
 form label {
     display: block;
@@ -29,7 +34,7 @@ form label {
     text-transform: uppercase;
     font-size: 20px;
     font-weight: 300;
-    color: maroon;
+    /* color: maroon; */
 }
 form input {
     display: block;
@@ -41,7 +46,7 @@ form input {
     /* margin: 10px 0 0 80px; */
     margin-top: 10px;
     padding: 10px;
-    background-color: #810000;
+    background-color: #126e82;
     color: cornsilk;
     text-transform: uppercase;
     cursor: pointer;
@@ -58,7 +63,7 @@ ul li {
 }
 ul li::before { 
     content: "\2022";
-    color: #f05945;
+    /* color: #f05945; */
     width: 1em;
     margin-right: 1em;
 }
@@ -78,15 +83,18 @@ table {
     border-collapse: collapse;
     text-align: center;
     margin: 20px auto;
+    font-family:  Helvetica;
+    color: #51c4d3;
+    background-color: #3c415c;
   }
   
   td, th {
     border: 1px solid #ccc;
     padding: 5px 10px;
-    color: darkred;
+    /* color: darkred; */
   }
   
   th {
     border: none;
-    color: #000;
+    /* color: #000; */
   }

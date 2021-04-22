@@ -1,4 +1,4 @@
-let images = ['./image/cutter.jpeg', './image/family.jpg', './image/fish.jpg', './image/frosted-cookie.jpg', './image/shirt.jpg'];
+let images = ['./image/cutter.jpeg', './image/family.jpg', './image/fish.jpg', './image/frosted-cookie.jpg', './image/shirt.jpg', './image/salmon.png'];
 
 let index = 0;
 const imgElement = document.querySelector('#mainPhoto');
@@ -9,5 +9,5 @@ function change() {
 }
 
 window.onload = function () {
-  setInterval(change, 2000);
+  setInterval(change, 5000);
 };

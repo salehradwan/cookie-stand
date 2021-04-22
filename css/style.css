@@ -22,6 +22,16 @@ header a {
 header a:hover {
     background-color: #536162;
 }
+
+header img {
+    display: block;
+    margin: 10px auto;
+    border: 1px dotted #810000;
+    border-radius: 5px;
+    padding: 10px;
+    width: 30%;
+    height: 30%;    
+}
 main p {
     font-weight: 700px;
     color: #a1898d;
@@ -32,4 +42,5 @@ main p {
 main ul li { 
     list-style-type: circle;
     font-size: 20px;
+    color: #8e7f7f;
 }

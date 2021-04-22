@@ -20,13 +20,13 @@
                 <legend>Add new branch city</legend>
                 <form id='cookies'>
                     <label for="cityName">City Name</label>
-                    <input type="text" id="cityName">
+                    <input type="text" id="cityName" required>
                     <label for="minCustomer">Min Customer</label>
-                    <input type="text" id="minCustomer">
+                    <input type="number" min="0" id="minCustomer" required>
                     <label for="maxCustomer">Max Customer</label>
-                    <input type="text" id="maxCustomer">
+                    <input type="number" id="maxCustomer" required>
                     <label for="avgCookies">Avg Cookies</label>
-                    <input type="text" id="avgCookies">
+                    <input type="number" step="0.1" id="avgCookies" required>
                     <button class="submit">Submit</button>
 
                 </form>

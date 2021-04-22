@@ -107,10 +107,9 @@ function eventButton(event) {
   const avgCookies = event.target.avgCookies.value;
 
   new Cookies(name, minCustomer, maxCustomer, avgCookies);
+  tableElement.innerHTML = '';
   tableHead();
-
   renderCity();
-
   tableTotal();
   cookies.reset();
 }
@@ -120,4 +119,7 @@ new Cookies('Dubai', 11, 38, 3.7);
 new Cookies('Paris', 20, 38, 2.3);
 new Cookies('Lima', 2, 16, 4.6);
 
+tableHead();
+renderCity();
+tableTotal();
 console.log(Cookies.allCity);
